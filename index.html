@@ -202,7 +202,7 @@
       <button
         class="cart-total shadow"
         data-bs-toggle="modal"
-        data-bs-target="#cartModal"
+        data-bs-target="#cartModal" onclick="updateTotalAmount()"
       >
         <div class="total-items-badge shadow-sm" id="total">0</div>
         <svg
@@ -260,7 +260,7 @@
                 </div>
               </div>
               <hr />
-              <div class="text-end fw-bold">Total: <span>$13.95</span></div>
+              <div class="text-end fw-bold">Total: <span id="modalTotal">$13.95</span></div>
             </div>
             <div class="modal-footer">
               <button

@@ -4,3 +4,6 @@ function addPizza(price){
  amount.innerHTML=parseFloat(parseFloat(amount.innerHTML)+price).toFixed(2);
  total.innerHTML=parseInt(total.innerHTML)+1;
 }
+function updateTotalAmount(){
+    document.getElementById("modalTotal").innerHTML="$"+document.getElementById("amount").innerHTML;
+}
