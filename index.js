@@ -11,15 +11,15 @@ function addPizza(price, pizzaType) {
     amount.innerHTML = parseFloat(parseFloat(amount.innerHTML) + price).toFixed(2);
     total.innerHTML = parseInt(total.innerHTML) + 1;
     if (pizzaType == 'Classic') {
-        classicName.className = "cart-modal-item d-flex align-items-center";
+        classicName.classList.remove("visually-hidden");
         classicAmount.value = parseInt(classicAmount.value) + 1;
     }
     if (pizzaType == 'Margherita') {
-        margheritaName.className = "cart-modal-item d-flex align-items-center";
+        margheritaName.classList.remove("visually-hidden");
         margheritaAmount.value = parseInt(margheritaAmount.value) + 1;
     }
     if (pizzaType == 'Pesto') {
-        pestoName.className = "cart-modal-item d-flex align-items-center";
+        pestoName.classList.remove("visually-hidden");
         pestoAmount.value = parseInt(pestoAmount.value) + 1;
     }
     modalTotal.innerHTML = "$" + amount.innerHTML;
@@ -35,7 +35,7 @@ function buttonMinus(price, pizzaType) {
             amount.innerHTML = parseFloat(parseFloat(amount.innerHTML) - price).toFixed(2);
             total.innerHTML = parseInt(total.innerHTML) - 1;
             classicAmount.value = parseInt(classicAmount.value) - 1;
-            classicName.className = "cart-modal-item d-flex align-items-center visually-hidden";
+            classicName.classList.add("visually-hidden");
         }
     }
     if (pizzaType == 'Margherita') {
@@ -48,7 +48,7 @@ function buttonMinus(price, pizzaType) {
             amount.innerHTML = parseFloat(parseFloat(amount.innerHTML) - price).toFixed(2);
             total.innerHTML = parseInt(total.innerHTML) - 1;
             margheritaAmount.value = parseInt(margheritaAmount.value) - 1;
-            margheritaName.className = "cart-modal-item d-flex align-items-center visually-hidden";
+            margheritaName.classList.add("visually-hidden");
         }
     }
     if (pizzaType == 'Pesto') {
@@ -61,7 +61,7 @@ function buttonMinus(price, pizzaType) {
             amount.innerHTML = parseFloat(parseFloat(amount.innerHTML) - price).toFixed(2);
             total.innerHTML = parseInt(total.innerHTML) - 1;
             pestoAmount.value = parseInt(pestoAmount.value) - 1;
-            pestoName.className = "cart-modal-item d-flex align-items-center visually-hidden";
+            pestoName.classList.add("visually-hidden");
         }
     }
     modalTotal.innerHTML = "$" + amount.innerHTML;
