@@ -1,13 +1,13 @@
+var amount = document.getElementById("amount");
+var total = document.getElementById("total");
+var modalTotal = document.getElementById("modalTotal");
+var classicAmount = document.getElementById('amount1')
+    , margheritaAmount = document.getElementById('amount2')
+    , pestoAmount = document.getElementById('amount3');
+var classicName = document.getElementById('pizza1'),
+    margheritaName = document.getElementById('pizza2'),
+    pestoName = document.getElementById('pizza3');
 function addPizza(price, pizzaType) {
-    var amount = document.getElementById("amount");
-    var total = document.getElementById("total");
-    var modalTotal = document.getElementById("modalTotal");
-    var classicAmount = document.getElementById('amount1')
-        , margheritaAmount = document.getElementById('amount2')
-        , pestoAmount = document.getElementById('amount3');
-    var classicName = document.getElementById('pizza1'),
-        margheritaName = document.getElementById('pizza2'),
-        pestoName = document.getElementById('pizza3');
     amount.innerHTML = parseFloat(parseFloat(amount.innerHTML) + price).toFixed(2);
     total.innerHTML = parseInt(total.innerHTML) + 1;
     if (pizzaType == 'Classic') {
@@ -25,15 +25,6 @@ function addPizza(price, pizzaType) {
     modalTotal.innerHTML = "$" + amount.innerHTML;
 }
 function buttonMinus(price, pizzaType) {
-    var amount = document.getElementById("amount");
-    var total = document.getElementById("total");
-    var modalTotal = document.getElementById("modalTotal");
-    var classicAmount = document.getElementById('amount1')
-        , margheritaAmount = document.getElementById('amount2')
-        , pestoAmount = document.getElementById('amount3');
-    var classicName = document.getElementById('pizza1'),
-        margheritaName = document.getElementById('pizza2'),
-        pestoName = document.getElementById('pizza3');
     if (pizzaType == 'Classic') {
         if (parseInt(classicAmount.value) > 1) {
             amount.innerHTML = parseFloat(parseFloat(amount.innerHTML) - price).toFixed(2);
