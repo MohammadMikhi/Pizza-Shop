@@ -39,7 +39,7 @@ function buttonMinus(price, pizzaType) {
         }
     }
     if (pizzaType == 'Margherita') {
-        if (parseInt(document.getElementById('amount2').value) > 1) {
+        if (parseInt(margheritaAmount.value) > 1) {
             amount.innerHTML = parseFloat(parseFloat(amount.innerHTML) - price).toFixed(2);
             total.innerHTML = parseInt(total.innerHTML) - 1;
             margheritaAmount.value = parseInt(margheritaAmount.value) - 1;
@@ -52,7 +52,7 @@ function buttonMinus(price, pizzaType) {
         }
     }
     if (pizzaType == 'Pesto') {
-        if (parseInt(document.getElementById('amount3').value) > 1) {
+        if (parseInt(pestoAmount.value) > 1) {
             amount.innerHTML = parseFloat(parseFloat(amount.innerHTML) - price).toFixed(2);
             total.innerHTML = parseInt(total.innerHTML) - 1;
             pestoAmount.value = parseInt(pestoAmount.value) - 1;
